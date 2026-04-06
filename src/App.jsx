@@ -128,7 +128,9 @@ export default function App() {
       ) : (
         /* --- CONDITION 2: SHOW SEARCH GRID --- */
         <>
-          <h1 style={styles.header}>MOVIE FLIX</h1>
+          <h1 style={styles.header}> MOVIE FLIX 
+  <span style={styles.subHeader}>By Ansh Singh</span>
+</h1>
           
           <div style={styles.searchBox}>
             <input
@@ -176,6 +178,30 @@ export default function App() {
 }
 
 // STYLING OBJECT
+const styles = {
+  container: { ... }, // keep your existing stuff
+  header: {
+    color: '#eab308',
+    fontSize: '3.5rem',
+    textAlign: 'center',
+    margin: '0 0 40px 0',
+    fontWeight: '900',
+    letterSpacing: '-2px',
+    display: 'flex',          // Add this
+    flexDirection: 'column', // Add this to stack them vertically
+    alignItems: 'center',    // Add this to keep them centered
+  },
+  // ADD THIS NEW SECTION:
+  subHeader: {
+    fontSize: '1rem',        // Much smaller font
+    fontWeight: '400',       // Thinner font
+    letterSpacing: '2px',    // Spaced out letters for a "clean" look
+    color: '#94a3b8',        // A softer grey color so it doesn't fight with the gold
+    marginTop: '5px',        // A little gap below the main title
+    textTransform: 'uppercase'
+  },
+  // ... rest of your styles
+}
 const styles = {
   container: {
     minHeight: '100vh',
