@@ -178,6 +178,7 @@ export default function App() {
 }
 
 // STYLING OBJECT
+
 const styles = {
   container: { ... }, // keep your existing stuff
   header: {
@@ -201,8 +202,6 @@ const styles = {
     textTransform: 'uppercase'
   },
   // ... rest of your styles
-}
-const styles = {
   container: {
     minHeight: '100vh',
     backgroundColor: '#0f172a',
