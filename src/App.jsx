@@ -2,14 +2,14 @@ import { useState, useEffect } from 'react';
 
 export default function App() {
   const [movies, setMovies] = useState([]);
-  const [searchTerm, setSearchTerm] = useState("Batman");
+  const [searchTerm, setSearchTerm] = useState(null);
   const [loading, setLoading] = useState(false);
   const [selectedMovie, setSelectedMovie] = useState(null); // Tracks the clicked movie
 
-  // Replace this with your actual activated API Key from your email
-  const API_KEY = "cc990886"; 
+  // Using the API key i got in my mail from the omdbapi website😊
+  const API_KEY = "50d81d4e"; 
 
-  // FUNCTION 1: Fetches the list of movies for the grid
+  // FUNCTION 1: Fetches the list of movies for the website using the API i have provided above 😊
   const fetchMovies = async (title) => {
     if (!title) return;
     setLoading(true);
@@ -42,9 +42,9 @@ export default function App() {
     setLoading(false);
   };
 
-  // Initial search on load
+  // Initial search as this will be my basic home screen when the user opens the website😊
   useEffect(() => {
-    fetchMovies("Batman");
+    fetchMovies(null);
   }, []);
 
   return (
@@ -90,7 +90,7 @@ export default function App() {
         }
       `}</style>
 
-      {/* --- CONDITION 1: SHOW MOVIE DETAILS PAGE --- */}
+      {/* --- CONDITION 1: SHOW MOVIE DETAILS PAGE ALONG WITH POSTERS (IF SUCCESSFUL) --- */}
       {selectedMovie ? (
         <div style={styles.detailContainer}>
           <button style={styles.backButton} onClick={() => setSelectedMovie(null)}>
@@ -126,7 +126,7 @@ export default function App() {
           </div>
         </div>
       ) : (
-        /* --- CONDITION 2: SHOW SEARCH GRID --- */
+        /* --- CONDITION 2: SHOW SEARCH GRID AREA AND ALL THE RESULTS --- */
         <>
           <h1 style={styles.header}>MOVIE FLIX</h1>
           
@@ -175,7 +175,7 @@ export default function App() {
   );
 }
 
-// STYLING OBJECT
+// STYLING PART FOR THE ENTIRE WEBSITE (COLORS, FONTS, LAYOUTS, ETC) --- USING INLINE STYLES FOR SIMPLICITY 😊
 const styles = {
   container: {
     minHeight: '100vh',
@@ -219,7 +219,7 @@ const styles = {
     cursor: 'pointer',
     fontSize: '16px',
   },
-  /* Detail Page Styles */
+  /* Detailing Page Styles and their margin and borders etc...  */
   detailContainer: { maxWidth: '1000px', margin: '0 auto' },
   backButton: {
     backgroundColor: '#334155', color: 'white', border: 'none', padding: '10px 20px', 
