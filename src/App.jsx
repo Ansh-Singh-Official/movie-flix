@@ -128,7 +128,8 @@ export default function App() {
       ) : (
         /* --- CONDITION 2: SHOW SEARCH GRID AREA AND ALL THE RESULTS --- */
         <>
-          <h1 style={styles.header}>AAGAYA MOVIE DEKHNE ?</h1>
+          <h1 className="text-4xl sm:text-6xl md:text-7xl font-black text-white mb-6 tracking-tight italic leading-tight">MOVIE<span className="text-yellow-500">FLIX</span>
+</h1>
           
           <div style={styles.searchBox}>
             <input
