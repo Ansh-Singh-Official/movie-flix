@@ -128,7 +128,7 @@ export default function App() {
       ) : (
         /* --- CONDITION 2: SHOW SEARCH GRID AREA AND ALL THE RESULTS --- */
         <>
-         <h1 className="text-6xl md:text-8xl font-black text-white mb-6 tracking-tighter italic leading-[0.85]">MOVIE<span className="text-yellow-500">FLIX</span>
+         <h1 className="text-[15vw] md:text-[12rem] font-[1000] text-white mb-6 tracking-[-0.05em] italic leading-[0.8] drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]">MOVIE<span className="text-yellow-500 drop-shadow-[0_0_20px_rgba(234,179,8,0.5)]"> FLIX</span>
 </h1>
           
           <div style={styles.searchBox}>
